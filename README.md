@@ -26,9 +26,9 @@ python3 main.py --gpu 0 --N_shot 1  --evaluate 1 --resume ./5way_1shot/checkpoin
 python3 main.py --gpu 0 --N_shot 5  --evaluate 1 --resume ./5way_5shot/checkpoint.pth.tar --N_reference 56  --N_reference_per_class 2  --N_generate 64
 ```
 # Trained models:
-- 5-way 1-shot
+- 5-way 1-shot:
  .\checkpoints\5way_1shot\checkpoint.pth
-- 5-way 5-shot
+- 5-way 5-shot:
  .\checkpoints\5way_5shot\checkpoint.pth
 # My Email:
 zhoufei@mail.nwpu.edu.cn
