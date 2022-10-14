@@ -8,17 +8,20 @@ Code and model of Meta-Hallucinating Prototype for Few-Shot Learning Promotion
 - torchvision  0.7.0
 - Python 3.7.3
 
-
-## Preparation
-Process the base dataset `base_data_process.py`
-
-## Train
+# Train
 ```
-python train.py --N_way 10 --N_shot 1 --N_query 19 
+- 5-way 1-shot:
+python3 main.py --gpu 0 --N_shot 1 --N_reference 56 --N_reference_per_class 2 --N_generate 64 --epochs 100 --diversity_parmater 1.0 --kl_parmater 1.0 --checkpoint 5way_1shot
+
+- 5-way 5-shot:
+python3 main.py --gpu 0 --N_shot 5 --N_reference 56 --N_reference_per_class 2 --N_generate 64 --epochs 100 --diversity_parmater 1.0 --kl_parmater 1.0 --checkpoint 5way_5shot
 
 ```
 ## Test
 ```
-python test.py --pretrain_path your model  --data_name PaviaU  --test_way 9  --test_shot 1  --run_number 666 
+- 5-way 1-shot:
+python3 main.py --gpu 0 --N_shot 1  --evaluate 1 --resume ./5way_1shot/checkpoint.pth.tar --N_reference 56  --N_reference_per_class 2  --N_generate 64
 
+- 5-way 5-shot:
+python3 main.py --gpu 0 --N_shot 5  --evaluate 1 --resume ./5way_5shot/checkpoint.pth.tar --N_reference 56  --N_reference_per_class 2  --N_generate 64
 ```
