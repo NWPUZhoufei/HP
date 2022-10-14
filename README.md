@@ -31,4 +31,4 @@ python3 main.py --gpu 0 --N_shot 5  --evaluate 1 --resume ./5way_5shot/checkpoin
 - 5-way 5-shot
  .\checkpoints\5way_5shot\checkpoint.pth
 # My Email:
-zhoufei@main.nwpu.edu.cn
+zhoufei@mail.nwpu.edu.cn
